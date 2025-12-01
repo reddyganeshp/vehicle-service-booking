@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>All Bookings</title>
+</head>
+<body>
+  <h2>All Bookings</h2>
+
+  {% if bookings|length == 0 %}
+    <p>No bookings yet (S3 integration pending).</p>
+  {% else %}
+    <ul>
+      {% for b in bookings %}
+        <li>
+          {{ b.name }} - {{ b.vehicle_number }}
+          <a href="/booking/update/{{ b.id }}">Update</a>
+          <a href="/booking/delete/{{ b.id }}">Delete</a>
+          <a href="/booking/pdf/{{ b.id }}">Download PDF</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <br>
+  <a href="/booking/create">Create new booking</a><br>
+  <a href="/">Back to Home</a>
+</body>
+</html>

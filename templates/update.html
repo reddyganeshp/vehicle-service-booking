@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <title>Update Booking</title>
+</head>
+<body>
+  <h2>Update Booking</h2>
+
+  <form method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" value="{{ booking.name }}" required><br><br>
+
+    <label>Phone:</label>
+    <input type="text" name="phone" value="{{ booking.phone }}" required><br><br>
+
+    <label>Vehicle Number:</label>
+    <input type="text" name="vehicle_number" value="{{ booking.vehicle_number }}" required><br><br>
+
+    <label>Service Type:</label>
+    <select name="service_type" required>
+      <option value="Oil Change" {% if booking.service_type == "Oil Change" %}selected{% endif %}>Oil Change</option>
+      <option value="General Service" {% if booking.service_type == "General Service" %}selected{% endif %}>General Service</option>
+      <option value="Brake Check" {% if booking.service_type == "Brake Check" %}selected{% endif %}>Brake Check</option>
+    </select><br><br>
+
+    <label>Date:</label>
+    <input type="date" name="date" value="{{ booking.date }}" required><br><br>
+
+    <button type="submit">Save</button>
+  </form>
+
+  <br>
+  <a href="/bookings">Back to list</a>
+</body>
+</html>

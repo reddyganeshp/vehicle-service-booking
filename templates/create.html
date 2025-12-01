@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <title>Create Booking</title>
+</head>
+<body>
+  <h2>Create Vehicle Service Booking</h2>
+  <form method="POST">
+
+    <label>Name:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label>Phone:</label>
+    <input type="text" name="phone" required><br><br>
+
+    <label>Vehicle Number:</label>
+    <input type="text" name="vehicle_number" required><br><br>
+
+    <label>Service Type:</label>
+    <select name="service_type" required>
+      <option value="Oil Change">Oil Change</option>
+      <option value="General Service">General Service</option>
+      <option value="Brake Check">Brake Check</option>
+    </select><br><br>
+
+    <label>Date:</label>
+    <input type="date" name="date" required><br><br>
+
+    <button type="submit">Create Booking</button>
+  </form>
+
+  <br>
+  <a href="/">Back to Home</a>
+</body>
+</html>
