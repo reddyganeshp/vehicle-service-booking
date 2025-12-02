@@ -1,83 +1,109 @@
+/* General Body and Typography */
 body {
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
-    background: #f4f7fb;
-    padding: 20px;
-    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Light background for the page */
+    color: #333; /* Dark text color for readability */
+    margin: 40px;
+    line-height: 1.6;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-h1, h2, h3 {
-    text-align: center;
-    color: #333;
-}
-
-form label {
-    font-weight: 600;
-    margin-top: 10px;
-    display: block;
-}
-
-form input, form select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background: #007bff;
-    border: none;
-    padding: 12px 20px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 16px;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.table th {
-    background: #007bff;
-    color: white;
-    padding: 10px;
-}
-
-.table td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.alert {
-    padding: 15px;
+/* Headings */
+h1, h2 {
+    color: #007bff; /* A nice blue for primary headings */
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
     margin-bottom: 20px;
-    border-radius: 5px;
 }
 
-.alert-success {
-    background: #d4edda;
-    color: #155724;
+h1 {
+    font-size: 2.5em;
 }
 
-.alert-error {
-    background: #f8d7da;
-    color: #721c24;
+h2 {
+    font-size: 1.8em;
 }
 
+/* Links */
+a {
+    color: #28a745; /* Green for links/actions */
+    text-decoration: none; /* Remove underline */
+    margin-right: 15px; /* Spacing between links */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1e7e34; /* Darker green on hover */
+}
+
+/* Forms */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block; /* Ensures label takes up full line */
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding/border in element's total width */
+}
+
+/* Buttons (Submit) */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* List of Bookings (list.html) */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex; /* Use flexbox to align content */
+    justify-content: space-between; /* Push action links to the right */
+    align-items: center;
+}
+
+li a {
+    margin-left: 10px; /* Spacing for the action links (Update, Delete, PDF) */
+    font-size: 0.9em;
+}
+
+/* Specific styling for the result/display pages */
+p strong {
+    color: #007bff; /* Emphasize the labels in result pages */
+    display: inline-block;
+    width: 150px; /* Aligns the data nicely */
+}
