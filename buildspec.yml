@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo "Installing Python dependencies..."
+      - pip install -r requirements.txt -t .
+
+  build:
+    commands:
+      - echo "Zipping application for Elastic Beanstalk..."
+      - zip -r app.zip . -x ".*" -x "*.git*" -x "__pycache__/*"
+
+artifacts:
+  files:
+    - app.zip
+
