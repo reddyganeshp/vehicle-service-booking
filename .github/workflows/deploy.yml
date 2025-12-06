@@ -29,8 +29,8 @@ jobs:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
-        application_name: vehicle
-        environment_name: vehicle-env
+        application_name: vehicle-service-app
+        environment_name: Vehicle-service-app-env
         region: us-east-1
         version_label: ${{ github.sha }}
         deployment_package: app.zip
