@@ -18,8 +18,7 @@ jobs:
         python-version: '3.9'
 
     - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+      run: pip install -r requirements.txt
 
     - name: Zip application
       run: zip -r app.zip . -x "*.git*" -x "__pycache__/*"
@@ -28,4 +27,10 @@ jobs:
       uses: einaregilsson/beanstalk-deploy@v21
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws_secret_key: ${{ secrets.AWS_SECRET_ACCE
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
+        application_name: vehicle
+        environment_name: vehicle-env
+        region: us-east-1
+        version_label: ${{ github.sha }}
+        deployment_package: app.zip
