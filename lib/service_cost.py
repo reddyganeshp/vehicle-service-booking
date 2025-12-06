@@ -5,7 +5,7 @@ This file acts as a NON-CRUD library as required for the project.
 
 def estimate_cost(service_type, vehicle_category):
     base_cost = {
-        "Oil Change": 40,
+        "Oil Change": 60,
         "General Service": 120,
         "Brake Check": 70
     }
