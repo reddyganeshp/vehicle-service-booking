@@ -19,9 +19,9 @@
 
     <label>Service Type:</label>
     <select name="service_type" required>
-      <option value="Oil Change" {% if booking.service_type == "Oil Change" %}selected{% endif %}>Oil Change</option>
+      <option value="Oil Change" {% if booking.service_type == "Oil Change" %}selected{% endif %}>Break Oil Change</option>
       <option value="General Service" {% if booking.service_type == "General Service" %}selected{% endif %}>General Service</option>
-      <option value="Brake Check" {% if booking.service_type == "Brake Check" %}selected{% endif %}>Brake Checking</option>
+      <option value="Brake Check" {% if booking.service_type == "Brake Check" %}selected{% endif %}>Break Checking</option>
     </select><br><br>
 
     <label>Date:</label>
